@@ -25,8 +25,10 @@ const loadAudio = () => {
   singerName.textContent = track.singerName;
   musicName.textContent = track.musicName;
   audio.src = track.audioSrc;
-  audio.load();
+if(isPlaying) {
+    audio.play();
+  }
 }
-
+loadAudio();
 
 
