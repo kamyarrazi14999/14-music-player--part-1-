@@ -30,6 +30,7 @@ const loadAudio = () => {
 if(isPlaying) {
     audio.play();
   }
+  // play AND pause button
   playpauseButton.addEventListener("click", () => {
     const playIcon = playpauseButton.firstElementChild;
     if (isPlaying) {
@@ -49,5 +50,11 @@ if(isPlaying) {
     isPlaying = !isPlaying;
   });
 }
+// Load INITIAL audio track
+volumeSlider.addEventListener("input", () => {
+  audio.volume = volumeSlider.value;
+});
+
+
 loadAudio();
 
