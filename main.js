@@ -54,7 +54,12 @@ if(isPlaying) {
 volumeSlider.addEventListener("input", () => {
   audio.volume = volumeSlider.value;
 });
-
+// SEEK TO CURENT PART OF THE AUDIO
+seekSlider.addEventListener("input", () => {
+  const newTime = (audio.duration * seekSlider.value) / 100;
+  audio.currentTime = newTime;
+  
+})
 
 loadAudio();
 
